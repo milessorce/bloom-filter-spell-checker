@@ -1,0 +1,5 @@
+.DS_Store
+*.scss
+*.css.map
+dist/
+node_modules
