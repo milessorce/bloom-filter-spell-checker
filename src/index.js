@@ -32,11 +32,11 @@ export default function SpellChecker () {
           <p className="spell-checker__microcopy">Spelling is case-sensitive</p>
         </label>
       </div>
-		</>
+    </>
   );
 }
 
 
 ReactDOM.render(
-	<SpellChecker />, document.getElementById('root')
+  <SpellChecker />, document.getElementById('root')
 );
