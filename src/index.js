@@ -4,11 +4,11 @@ import './styles/index.css';
 import { bloomFilter } from './bloomFilter.js';
 
 export default function SpellChecker () {
-  const [ value, setValue ] = useState('');
+  const [ inputValue, setInputValue ] = useState('');
   const [ isError, setIsError ] = useState(false);
 
   const handleChange = value => {
-    setValue(value);
+    setInputValue(value);
     setIsError(!bloomFilter.has(value));
   };
 
@@ -27,7 +27,7 @@ export default function SpellChecker () {
               spellCheck={ false }
             />
             { isError && <i className="fas fa-exclamation-circle spell-checker__input-icon spell-checker__input-icon--error" aria-hidden="true" /> }
-            { !isError && value && <i className="fas fa-check-circle spell-checker__input-icon spell-checker__input-icon--correct" aria-hidden="true" /> }
+            { !isError && inputValue && <i className="fas fa-check-circle spell-checker__input-icon spell-checker__input-icon--correct" aria-hidden="true" /> }
           </div>
           <p className="spell-checker__microcopy">Spelling is case-sensitive</p>
         </label>
